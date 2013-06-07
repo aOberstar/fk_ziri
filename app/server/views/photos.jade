@@ -1,0 +1,51 @@
+
+extends layout
+
+block content
+	include navbar
+	br
+	br
+	br
+	br
+	br
+	#upload-photo
+		form(method='post', enctype='multipart/form-data', action='/photos')#upload-photo-form.form-horizontal
+			h1
+			input(type='file', name='thumbnail')
+			button(type='submit')#upload-photo-form-btn1.btn
+
+	#carousel			
+		#myCarousel.carousel.slide
+			ol.carousel-indicators
+				li.active(data-target='#myCarousel', data-slide-to='0')
+				li(data-target='#myCarousel', data-slide-to='1')
+				li(data-target='#myCarousel', data-slide-to='2')
+			// Carousel items 
+			.carousel-inner
+				.active.item
+					img(src='/photos/1.jpg', alt='Slika ena')
+					.carousel-caption
+						h4 Zlatko
+				.item
+					img(src='/photos/2.jpg', alt='Slika dva')
+					.carousel-caption
+						h4 A sma?
+				.item
+					img(src='/photos/3.jpg', alt='Slika tri')
+					.carousel-caption
+						h4 &#382;ogice
+			// Carousel nav 
+			a.carousel-control.left(href='#myCarousel', data-slide='prev') &#60;
+			a.carousel-control.right(href='#myCarousel', data-slide='next') &#62;
+
+	include modals/alert
+	include modals/confirm
+
+block scripts
+	script(src='/vendor/jquery.min.js')
+	script(src='/vendor/jquery.form.js')
+	script(src='/vendor/bootstrap-modal.js')
+	script(src='/vendor/bootstrap-transition.js')
+	script(src='/vendor/bootstrap-carousel.js')
+	script(src='/js/views/photos.js')
+	script(src='/js/controllers/photosController.js')

@@ -1,0 +1,29 @@
+{
+	"name": "fk_ziri",
+	"version": "0.1",
+	"description": "Spletna stran Floorball kluba Žiri, narejena z NodeJS in MongoDB.",
+	"author": {
+		"name": "Andraž Oberstar",
+		"email": "andraz.oberstar@gmail.com"
+	},
+	"website":{
+		"url": "todo"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/aOberstar/fk_ziri.git"
+	},
+	"private": true,
+	"dependencies": {
+		"express": "latest",
+		"stylus": "latest",
+		"jade": "latest",
+		"mongodb": "latest",
+		"moment" : "latest",
+		"emailjs": "latest"
+	},
+	"engines": {
+		"node": ">=0.10.10",
+		"npm":  ">=1.1.65"
+	}
+}
